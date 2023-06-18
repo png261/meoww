@@ -1,5 +1,8 @@
+import os
 import pygame
+
 from .game import Game
+from .settings import IMAGE_DIR
 
 
 class Cat:
@@ -10,7 +13,7 @@ class Cat:
         self.vy = y;
         self.width = width
         self.height = height
-        self.image = pygame.image.load("assets/images/cat.png")
+        self.image = pygame.image.load(os.path.join(IMAGE_DIR, "cat.png"))
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
         self.is_flipped_x = False
 

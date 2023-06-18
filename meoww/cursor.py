@@ -1,12 +1,15 @@
+import os
 import pygame
+
 from .game import Game
+from .settings import IMAGE_DIR
 
 
 class Cursor:
     def __init__(self, width=32, height=32):
         self.width = width
         self.height = height
-        self.image = pygame.image.load("assets/images/cursor.png")
+        self.image = pygame.image.load(os.path.join(IMAGE_DIR, "cursor.png"))
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
         self.x = 0
         self.y = 0

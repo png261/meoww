@@ -1,5 +1,8 @@
+import os
 import pygame
+
 from . import util
+from .settings import IMAGE_DIR
 
 @util.singleton
 class Game:
@@ -10,7 +13,7 @@ class Game:
 
         self.FPS = 60
         self.window = Window(700, 700, 60)
-        self.window.set_background_image("assets/images/background.png")
+        self.window.set_background_image(os.path.join(IMAGE_DIR, "background.png"))
         self.isRunning=True
         self.cursor = Cursor(50, 50)
         self.cat = Cat(0, 0, 100, 100)
