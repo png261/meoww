@@ -1,0 +1,11 @@
+dist/*
+*.egg-info/*
+*.pyc
+subprocess
+re
+build/*
+.coverage
+.vscode/*
+__pycache__/*
+env/
+
